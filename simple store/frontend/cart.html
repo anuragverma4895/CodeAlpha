@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html" style="color: white; text-decoration: none;">My Awesome Store</a></h1>
+        <nav style="display: flex; align-items: center; gap: 1.5rem;">
+            <div id="user-status">
+                <a href="login.html" style="color: white;">Login</a>
+            </div>
+            <a href="cart.html" id="cart-icon" style="color: white; text-decoration: none;">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items-container">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div id="cart-total">
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+            <!-- THE ID HERE MUST BE EXACTLY "checkout-btn" -->
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+    
+    <!-- The script order must be correct -->
+    <script src="cart-logic.js"></script>
+    <script src="shared.js"></script>
+    <script src="cart.js" defer></script>
+    
+    <!-- Toast Notification element -->
+    <div id="toast-notification"></div>
+
+</body>
+</html>

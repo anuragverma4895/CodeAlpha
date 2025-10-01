@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="color: white; text-decoration: none;">My Awesome Store</a></h1>
+        <nav style="display: flex; align-items: center; gap: 1.5rem;">
+            <div id="user-status">
+                <!-- This will be filled by JavaScript -->
+                <a href="login.html" style="color: white;">Login</a>
+            </div>
+            <a href="cart.html" id="cart-icon" style="color: white; text-decoration: none;">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <!-- REGISTRATION FORM -->
+        <div class="auth-form">
+            <h2>Create an Account</h2>
+            <form id="register-form">
+                <label for="register-username">Username</label>
+                <input type="text" id="register-username" required>
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Register</button>
+                <p id="register-message" class="message"></p>
+            </form>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div class="auth-form">
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" required>
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+                <p id="login-message" class="message"></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="cart-logic.js"></script>
+    <script src="shared.js"></script>
+    <script src="auth.js" defer></script>
+</body>
+</html>

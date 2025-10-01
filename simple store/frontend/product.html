@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html" style="color: white; text-decoration: none;">My Awesome Store</a></h1>
+        <nav style="display: flex; align-items: center; gap: 1.5rem;">
+            <div id="user-status">
+                <a href="login.html" style="color: white;">Login</a>
+            </div>
+            <a href="cart.html" id="cart-icon" style="color: white; text-decoration: none;">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- This container MUST have the id "product-detail-container" -->
+        <div id="product-detail-container">
+            <p>Loading product details...</p>
+        </div>
+    </main>
+
+    <!-- The script order must be correct -->
+    <script src="cart-logic.js"></script>
+    <script src="shared.js"></script>
+    <script src="product.js" defer></script>
+    <div id="toast-notification"></div>
+
+</body>
+</html>
