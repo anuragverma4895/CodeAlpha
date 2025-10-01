@@ -1,0 +1,291 @@
+/* public/style.css - NEW MODERN DESIGN */
+
+/* 1. Global Styles & CSS Variables */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --background-color: #f0f2f5;
+    --card-background: #ffffff;
+    --text-color: #1c1e21;
+    --text-secondary: #65676b;
+    --border-color: #dddfe2;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding-top: 80px; /* Space for fixed header */
+}
+
+.container {
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* 2. Header & Navigation */
+.main-header {
+    width: 100%;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.main-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.main-header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-header nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.main-header nav a:hover {
+    color: var(--primary-color);
+}
+
+#logoutButton {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: background-color 0.2s ease;
+}
+
+#logoutButton:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 3. Card Base Style */
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 4. Post Form */
+#postForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#postContent {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#postForm button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+#postForm button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 5. Post Card */
+.post-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post-card-header .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.post-card-header .author-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.post-card-header .author-info .post-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.post-card .post-content {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.post-actions {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: color 0.2s ease;
+}
+.action-button:hover {
+    color: var(--primary-color);
+}
+.action-button i { /* Icon style */
+    font-size: 1.4rem;
+}
+.action-button.liked {
+    color: var(--primary-color);
+}
+
+
+/* 6. Comments Section */
+.comments-section {
+    margin-top: 15px;
+}
+
+.comment {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.comment .comment-author {
+    font-weight: 600;
+}
+.comment .comment-text {
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    border-radius: 18px;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.comment-form input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-family: var(--font-family);
+}
+.comment-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+/* 7. Discover Page */
+.user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 8. Auth Forms */
+.auth-container {
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.auth-container input {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.auth-container button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.auth-container button:hover {
+    background-color: var(--primary-hover);
+}
+.auth-switch {
+    margin-top: 20px;
+}

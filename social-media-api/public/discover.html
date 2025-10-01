@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Users - Mini Social</title>
+    
+    <!-- Modern Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h2>Mini Social</h2>
+            <nav>
+                <!-- Link back to the main feed page -->
+                <a href="/">My Feed</a>
+                <button id="logoutButton">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Discover Users</h1>
+        
+        <!-- This container will be filled with user cards by discover.js -->
+        <div id="usersContainer" class="users-container">
+            <div class="card">
+                <p>Loading users...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your Scripts -->
+    <script src="discover.js"></script>
+</body>
+</html>
